@@ -1,0 +1,22 @@
+.panel {
+  box-shadow: none;
+
+  &-heading-space {
+    min-height: 50px;
+
+    &::after {
+      content: ' ';
+      white-space: pre;
+    }
+  }
+}
+
+.panel-hr {
+  border-top: 1px solid;
+}
+
+.panel-default {
+  .panel-hr {
+    border-color: $panel-default-border;
+  }
+}

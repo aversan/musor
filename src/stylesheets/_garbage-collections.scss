@@ -1,0 +1,196 @@
+.garbage-collection {
+  &-image {
+    border-radius: $border-radius-large;
+  }
+
+  &-panel {
+    overflow: hidden;
+
+    &-footer {
+      .prices {
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &-table {
+    & > thead > tr > td,
+    & > thead > tr > th {
+      font-size: 15px;
+      line-height: 20px;
+      vertical-align: middle;
+
+      &.text-uppercase {
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+
+    .td-price {
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    &-1.table {
+      table-layout: fixed;
+
+      & > thead > tr > td,
+      & > thead > tr > th,
+      & > tbody > tr > td,
+      & > tbody > tr > th {
+        &:nth-child(2) {
+          width: 130px;
+          max-width: 130px;
+        }
+
+        &:nth-child(3) {
+          width: 130px;
+          max-width: 130px;
+        }
+
+        &:nth-child(4) {
+          width: 130px;
+          max-width: 130px;
+        }
+      }
+
+      & > thead > tr > td,
+      & > thead > tr > th {
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 50px;
+      }
+
+      & > tbody > tr:first-child > td,
+      & > tbody > tr:first-child > th {
+        font-weight: bold;
+      }
+    }
+
+    &-2.table {
+      table-layout: fixed;
+
+      & > thead > tr > td,
+      & > thead > tr > th,
+      & > tbody > tr > td,
+      & > tbody > tr > th {
+        &:nth-child(1) {
+          width: 110px;
+        }
+      }
+
+      & > thead > tr > td,
+      & > thead > tr > th {
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 50px;
+      }
+
+      & > thead > tr > td,
+      & > thead > tr > th {
+        &.text-uppercase {
+          @include media-breakpoint-down(sm) {
+            font-size: 12px;
+            line-height: 1;
+          }
+        }
+      }
+
+        & > tbody > tr > td:nth-child(2),
+      & > tbody > tr > th:nth-child(2) {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.garbage-collection-1 {
+  .garbage-collection-row {
+    margin-left: -7px;
+    margin-right: -8px;
+  }
+
+  .garbage-collection-col-left,
+  .garbage-collection-col-right {
+    padding-left: 7px;
+    padding-right: 8px;
+  }
+
+  .garbage-collection-col-left {
+    width: 40%;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+  .garbage-collection-col-right {
+    width: 60%;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+  .garbage-collection-image {
+    height: 500px;
+
+    @include media-breakpoint-down(xs) {
+      padding-bottom: percentage(9 / 16);
+      height: auto;
+    }
+  }
+
+  .garbage-collection-table {
+    margin-top: -50px;
+
+    & > thead > tr > th,
+    & > thead > tr > td {
+      color: $white;
+    }
+  }
+}
+
+.garbage-collection-2 {
+  .garbage-collection-table {
+    margin-top: -50px;
+
+    & > thead > tr > th,
+    & > thead > tr > td {
+      color: $white;
+    }
+  }
+}
+
+.garbage-collection-3 {
+  .garbage-collection-row {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .garbage-collection-col-left,
+  .garbage-collection-col-right {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .garbage-collection-image {
+    height: 320px;
+
+    @include media-breakpoint-down(xs) {
+      height: auto;
+      padding-bottom: percentage(9 / 16);
+    }
+  }
+
+  .garbage-collection-text {
+    p:first-child {
+      margin-top: 0;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

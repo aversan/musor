@@ -1,0 +1,68 @@
+<div id="calc_wrap"></div>
+{#
+<div class="calculator-container">
+  <div class="panel panel-default calculator-panel">
+    <div class="calculator-panel-girl-part-1"></div>
+    <div class="calculator-panel-girl-part-2"></div>
+    <div class="panel-heading text-center calculator-panel-heading vertical-align">
+      <div class="vertical-align-middle">
+        <div class="h2 text-white text-truncate">Расчет стоимости</div>
+      </div>
+    </div>
+    <div class="panel-body calculator-panel-body">
+      <div class="calculator-panel-inner mx-auto">
+        <div class="form-group calculator-panel-form-group pt-2">
+          <label class="control-label text-uppercase font-weight-bold calculator-panel-control-label" for="calc-control-1">Выберите округ (или город):</label>
+          <select class="custom-select d-block full-width" name="" id="calc-control-1">
+            <option value="">Округ Москвы</option>
+          </select>
+        </div>
+        <div class="form-group calculator-panel-form-group">
+          <label class="control-label text-uppercase font-weight-bold calculator-panel-control-label" for="calc-control-2">Выберите город (или округ):</label>
+          <select class="custom-select d-block full-width" name="" id="calc-control-2">
+            <option value="">Подольск</option>
+          </select>
+        </div>
+        <div class="row calculator-panel-row">
+          <div class="col-xs-6 calculator-panel-col">
+            <div class="form-group calculator-panel-form-group">
+              <label class="control-label text-uppercase font-weight-bold calculator-panel-control-label" for="calc-control-3">Выберите объем:</label>
+              <select class="custom-select d-block full-width" name="" id="calc-control-3">
+                <option value="">Подольск</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-xs-6 calculator-panel-col">
+            <div class="form-group calculator-panel-form-group">
+              <label class="control-label text-uppercase font-weight-bold calculator-panel-control-label-label" for="calc-control-4">Выберите кол-во:</label>
+              <select class="custom-select d-block full-width" name="" id="calc-control-4">
+                <option value="">Подольск</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group calculator-panel-form-group">
+          <label class="custom-control custom-checkbox calculator-panel-checkbox">
+            <input type="checkbox" class="custom-control-input" checked>
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Погрузка (цена появляется под кнопкой ниже)</span>
+          </label>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-lg btn-success text-uppercase calculator-panel-btn" type="button">Рассчитать стоимость</button>
+          <div class="h3 text-truncate mt-3 mb-0 mb-2">
+            <span class="font-weright-normal">Стоимость:</span>
+            <span class="text-nowrap font-weight-bold">10 900 руб.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-hr"></div>
+    <div class="panel-body calculator-panel-body">
+      <div class="calculator-panel-inner mx-auto">
+        {% include "shared/phone-box.html" %}
+      </div>
+    </div>
+  </div>
+</div>
+#}

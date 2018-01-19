@@ -1,0 +1,91 @@
+.calculator-container {
+  overflow-x: hidden;
+
+  @include media-breakpoint-down(sm) {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.calculator-panel {
+  max-width: 570px;
+  position: relative;
+
+  &-heading {
+    &.panel-heading {
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 60px;
+    }
+  }
+
+  &-body {
+    &.panel-body {
+      padding: 30px;
+    }
+  }
+
+  &-girl-part-1,
+  &-girl-part-2 {
+    position: absolute;
+  }
+
+  &-girl-part-1 {
+    width: 254px;
+    height: 646px;
+    background: url(../images/girl-part-1.png) 0 0 no-repeat;
+    bottom: -7px;
+    left: 100%;
+  }
+
+  &-girl-part-2 {
+    width: 131px;
+    height: 102px;
+    background: url(../images/girl-part-2.png) 0 0 no-repeat;
+    bottom: 99px;
+    right: 0;
+  }
+
+  &-inner {
+    max-width: 380px;
+  }
+
+  &-row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  &-col {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &-form-group {
+    &.form-group {
+      margin-bottom: 32px;
+    }
+
+    &.has-error ~ .calculator-panel-form-group .control-label,
+    &.has-danger ~ .calculator-panel-form-group .control-label {
+      color: $state-danger-text;
+    }
+  }
+
+  &-control-label {
+    &.text-uppercase {
+      font-size: 15px;
+    }
+  }
+
+  &-btn {
+    &.text-uppercase {
+      font-size: 17px;
+    }
+  }
+
+  &-checkbox {
+    font-size: 15px;
+  }
+}

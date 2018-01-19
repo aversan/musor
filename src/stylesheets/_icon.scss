@@ -1,0 +1,32 @@
+.icon {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.icon-sprite {
+  &:before {
+    content: '';
+    display: inline-block;
+    background-image: url('../images/sprite.png');
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &.icon-phone-blue {
+    @include sprite('icon-phone-blue');
+  }
+
+  &.icon-phone-white {
+    @include sprite('icon-phone-white');
+  }
+
+  &.icon-phone-white-lg {
+    @include sprite('icon-phone-white-lg');
+  }
+}

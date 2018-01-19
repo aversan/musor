@@ -1,0 +1,96 @@
+$phone-box-height: 66px;
+$phone-box-height-lg: 86px;
+
+.phone-box {
+  height: $phone-box-height;
+  background-color: $white;
+  box-shadow: 0 0 20px rgba($black, 0.15);
+  border-radius: $border-radius-large;
+  position: relative;
+  padding-left: $phone-box-height;
+  display: inline-block;
+
+  &-icon {
+    width: $phone-box-height;
+    height: $phone-box-height;
+    background-color: $blue-light;
+    border-radius: $border-radius-large 0 0 $border-radius-large;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: $phone-box-height;
+    text-align: center;
+  }
+
+  &-number {
+    font-size: 28px;
+    line-height: $phone-box-height;
+    height: $phone-box-height;
+    display: block;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  &-link {
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 6px;
+    padding-left: 6px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &-lg {
+    height: $phone-box-height-lg;
+    padding-left: $phone-box-height-lg;
+
+    .phone-box-icon {
+      width: $phone-box-height-lg;
+      height: $phone-box-height-lg;
+      line-height: $phone-box-height-lg;
+    }
+
+    .phone-box-number {
+      line-height: $phone-box-height-lg;
+      height: $phone-box-height-lg;
+      position: relative;
+
+      &[data-hint] {
+        padding-bottom: 32px;
+        line-height: $phone-box-height-lg - 26px;
+
+        &::after {
+          content: attr(data-hint);
+          position: absolute;
+          right: 20px;
+          left: 20px;
+          font-size: 15px;
+          line-height: 1;
+          font-weight: normal;
+          bottom: 18px;
+          @include text-overflow;
+        }
+      }
+    }
+  }
+
+  &-fixed {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    display: none;
+  }
+}

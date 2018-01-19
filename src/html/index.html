@@ -1,0 +1,30 @@
+{% extends 'layouts/application.html' %}
+{% block content %}
+  <div class="container-fluid">
+    {% include "_main/garbage-collection-1.html" %}
+    <div class="divider"></div>
+    {% include "_main/calculator.html" %}
+    <div class="divider"></div>
+    {% include "_main/garbage-collection-2.html" %}
+    <div class="divider"></div>
+    {% include "_main/garbage-collection-3.html" %}
+    <div class="divider"></div>
+    {% include "_main/service-group.html" %}
+    <div class="divider"></div>
+    {% include "_main/charact-group-1.html" %}
+    <div class="divider"></div>
+    {% include "_main/charact-group-2.html" %}
+    <div class="divider"></div>
+    {% include "_main/charact-group-3.html" %}
+    {% include "_main/garbage-collection-1-no-js.html" %}
+    <div class="divider"></div>
+    {% include "shared/phone-box-fixed.html" %}
+  </div>
+{% endblock %}
+{% block javascript %}
+<script src="javascripts/jquery.min.js"></script>
+<script src="javascripts/data.js"></script>
+<script src="javascripts/popup_tel.js"></script>
+<script src="javascripts/validator.js"></script>
+<script src="javascripts/app.js"></script>
+{% endblock %}

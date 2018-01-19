@@ -1,0 +1,34 @@
+@mixin sprite($filename) {
+  & {
+    @if $filename == icon-phone-blue {
+      height: 25px;
+      width: 25px;
+    }
+    @if $filename == icon-phone-white-lg {
+      height: 46px;
+      width: 46px;
+    }
+    @if $filename == icon-phone-white {
+      height: 34px;
+      width: 34px;
+    }
+  }
+
+  &::before {
+    @if $filename == icon-phone-blue {
+      background-position: 0px -46px;
+      height: 25px;
+      width: 25px;
+    }
+    @if $filename == icon-phone-white-lg {
+      background-position: 0px 0px;
+      height: 46px;
+      width: 46px;
+    }
+    @if $filename == icon-phone-white {
+      background-position: -46px 0px;
+      height: 34px;
+      width: 34px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.container-fluid {
+  max-width: 1220px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.col {
+  position: relative;
+  min-height: 1px;
+  padding-left: $grid-gutter-width / 2;
+  padding-right: $grid-gutter-width / 2;
+  float: left;
+}
