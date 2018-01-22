@@ -4,11 +4,14 @@
 
   &-image {
     position: absolute;
-    left: 0;
+    left: calc(50% - 15px);
     top: 0;
     right: 0;
     bottom: 0;
-    border-radius: $border-radius-large;
+    border-radius: 0 $border-radius-large $border-radius-large 0;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: contain;
 
     @include media-breakpoint-down(xs) {
       position: relative;
@@ -17,15 +20,9 @@
       top: auto;
       right: auto;
       bottom: auto;
-
-    }
-
-    &.cover-background {
-      @include media-breakpoint-down(xs) {
-        background-size: contain;
-        background-position-x: -111px;
-        background-position-y: calc(50% + 24px);
-      }
+      background-position: 50% 0;
+      margin-top: 63px;
+      border-radius: $border-radius-large $border-radius-large 0 0;
     }
   }
 
@@ -49,7 +46,7 @@
   .h2 {
     @include media-breakpoint-down(xs) {
       position: absolute;
-      top: 40px;
+      top: 30px;
       left: 40px;
       right: 40px;
     }
