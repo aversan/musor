@@ -23,22 +23,39 @@ $(document).ready(function() {
   };
 
   const $feature = $('#feature');
-  const titles = [
-    `<div>Текст 1 Услуги грузчиков оплачиваются дополнительно 8 кубов
+  const featureData = [
+    {
+      title: `<div>Текст 1 Услуги грузчиков оплачиваются дополнительно 8 кубов
       <span class="font-weight-bold">от 3000 руб.</span>;</div><div>20, 27 кубов <span class="font-weight-bold">от 7000 руб.</span></div>`,
-    `<div>Текст 2 Услуги грузчиков оплачиваются дополнительно 8 кубов
+      hint: `(если у заказчика есть необходимость в грузчиках)`,
+    },
+    {
+      title: `<div>Текст 2 Услуги грузчиков оплачиваются дополнительно 8 кубов
       <span class="font-weight-bold">от 3000 руб.</span>;</div><div>20, 27 кубов <span class="font-weight-bold">от 7000 руб.</span></div>`,
-    `<div>Текст 3 Услуги грузчиков оплачиваются дополнительно 8 кубов
+      hint: `(если у заказчика есть необходимость в грузчиках)`,
+    },
+    {
+      title: `<div>Текст 3 Услуги грузчиков оплачиваются дополнительно 8 кубов
       <span class="font-weight-bold">от 3000 руб.</span>;</div><div>20, 27 кубов <span class="font-weight-bold">от 7000 руб.</span></div>`,
-    `<div>Текст 4 Услуги грузчиков оплачиваются дополнительно 8 кубов
+      hint: `(если у заказчика есть необходимость в грузчиках)`,
+    },
+    {
+      title: `<div>Текст 4 Услуги грузчиков оплачиваются дополнительно 8 кубов
       <span class="font-weight-bold">от 3000 руб.</span>;</div><div>20, 27 кубов <span class="font-weight-bold">от 7000 руб.</span></div>`,
-    `<div>Текст 5 Услуги грузчиков оплачиваются дополнительно 8 кубов
-      <span class="font-weight-bold">от 3000 руб.</span>;</div><div>20, 27 кубов <span class="font-weight-bold">от 7000 руб.</span></div>`
+      hint: `(если у заказчика есть необходимость в грузчиках)`,
+    },
+    {
+      title: `<div>Текст 5 Услуги грузчиков оплачиваются дополнительно 8 кубов
+      <span class="font-weight-bold">от 3000 руб.</span>;</div><div>20, 27 кубов <span class="font-weight-bold">от 7000 руб.</span></div>`,
+      hint: `(если у заказчика есть необходимость в грузчиках)`,
+    },
   ];
   $feature.find('.service-item').each(function(index){
     const $item = $(this);
     const $title = $item.find('.service-item-title');
-    $title.empty().html(titles[index]);
+    const $hint = $item.find('.service-item-hint');
+    $title.empty().html(featureData[index].title);
+    $hint.empty().html(featureData[index].hint);
   });
 
   const calculatorHTML = `
