@@ -22,7 +22,7 @@ $(document).ready(function() {
     `
   };
 
-  const $feature = $('#feature');
+  const $features = $('.js-service-item');
   const featureData = [
     {
       title: `<div>Текст 1 Услуги грузчиков оплачиваются дополнительно 8 кубов
@@ -50,12 +50,13 @@ $(document).ready(function() {
       hint: `(если у заказчика есть необходимость в грузчиках)`,
     },
   ];
-  $feature.find('.service-item').each(function(index){
+  $features.each(function(index){
     const $item = $(this);
     const $title = $item.find('.service-item-title');
     const $hint = $item.find('.service-item-hint');
-    $title.empty().html(featureData[index].title);
-    $hint.empty().html(featureData[index].hint);
+    const key = $item.data('key') || 0;
+    $title.empty().html(featureData[key].title);
+    $hint.empty().html(featureData[key].hint);
   });
 
   const calculatorHTML = `
